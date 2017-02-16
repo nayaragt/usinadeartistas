@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Espaço Cultural Usina de Artistas</title>
+  <!-- <meta charset="utf-8"> -->
+  <meta charset="iso-8859-1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 400 15px/1.8 Lato, sans-serif;
+      color: #777;
+  }
+  h3, h4 {
+      margin: 10px 0 30px 0;
+      letter-spacing: 10px;
+      font-size: 20px;
+      color: #111;
+  }
+  .container {
+      padding: 80px 120px;
+  }
+  .person {
+      border: 10px solid transparent;
+      margin-bottom: 25px;
+      width: 80%;
+      height: 80%;
+      opacity: 0.7;
+  }
+  .person:hover {
+      border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+      -webkit-filter: grayscale(90%);
+      filter: grayscale(90%); /* make all photos black and white */
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+  }
+  .carousel-caption h3 {
+      color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+      background: #2d2d30;
+      color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail p {
+      margin-top: 15px;
+      color: #555;
+  }
+  .btn {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #f1f1f1;
+      border-radius: 0;
+      transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+      border: 1px solid #333;
+      background-color: #fff;
+      color: #000;
+  }
+  .modal-header, h4, .close {
+      background-color: #333;
+      color: #fff !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-header, .modal-body {
+      padding: 40px 50px;
+  }
+  .nav-tabs li a {
+      color: #777;
+  }
+  #googleMap {
+      width: 100%;
+      height: 400px;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+  }
+  .navbar {
+      font-family: Montserrat, sans-serif;
+      margin-bottom: 0;
+      background-color: #2d2d30;
+      border: 0;
+      font-size: 11px !important;
+      letter-spacing: 4px;
+      opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+      color: #fff !important;
+  }
+  .navbar-nav li.active a {
+      color: #fff !important;
+      background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+  }
+  .open .dropdown-toggle {
+      color: #fff;
+      background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+      color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+      background-color: red !important;
+  }
+  footer {
+      background-color: #2d2d30;
+      color: #f5f5f5;
+      padding: 32px;
+	  /* display: block; */
+  }
+  footer a {
+      color: #f5f5f5;
+  }
+  footer a:hover {
+      color: #777;
+      text-decoration: none;
+  }
+  .form-control {
+      border-radius: 0;
+  }
+  textarea {
+      resize: none;
+  }
+  thead {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+  }
+  </style>
+  
+<!-- Begin Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-78807937-1', 'auto');
+  ga('set', 'page', '/sopordeus');
+  ga('send', 'pageview', page);
+  ga('set', 'userId', {{USER_ID}}); // Defina o ID de usuário usando o user_id conectado.
+  // ga('send', 'pageview', [page], [fieldsObject]);
+  // ga('set', 'title', 'inicio');
+  // ga('send', 'pageview', page);
+});
+</script>
+<!-- End Google Analytics -->
+
+</head>
+
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+<div class="container-fluid">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="#myPage">Logo</a>
+	</div>
+		
+	<div class="collapse navbar-collapse" id="myNavbar">
+		<ul class="nav navbar-nav navbar-right">
+		<li><a href="inicio.html">INÍCIO</a></li>
+		<li><a href="sopordeus.html">SÓ POR DEUS</a></li>
+		<li><a href="quemsomos.html">QUEM SOMOS</a></li>
+		<li><a href="contato.html">CONTATO</a></li>
+		<li><a href="aulas.html">HORÁRIOS DAS AULAS</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Merchandise</a></li>
+            <li><a href="#">Extras</a></li>
+            <li><a href="#">Media</a></li>
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+		</ul>
+	</div>
+</div>
+</nav>
+
+
+<div id="band" class="container text-center">
+  <h3 class="text-center">GRUPO TEATRAL SÓ POR DEUS</h3>
+  <br>
+  <img src="images/grupo.jpg" class="image featured" alt="Responsive image">
+  <br>
+  <br>
+  <p><em>Este é o grupo de teatro residente do Espaço Cultural Usina de Artistas</em></p>
+  <p>Criado em 2001, o grupo teatral Só Por Deus, carrega uma historia de realizações e glórias através deste anos de vida.</p>
+  <p>Criado com a intenção de só participar do Fect (Festival de Curtas de Teatro de Osasco) em 2001, o grupo se surpreendeu com a sua primeira apresentação no festival, e desde então, continua ativo apresentando nos festivais de Osasco e região.</p>
+  <p>A Ideologia do grupo continua a mesma desde o seu inicio, que é dar oportunidade aos novos interessados na arte de atuar e levar a todos os lugares sua arte, seu teatro e suas idéias de melhorar o entendimento de todos afim de transformar o mundo em um lugar melhor.</p>
+  <p>Senhoras e Senhores o Espaço Cultural Usina de Artistas apresenta suas estrelas:</p>
+</div>
+  
+  
+<div class="container">
+
+	<ul class="nav nav-tabs">
+		<li class="active"><a data-toggle="tab" href="#home">Renato Reis</a></li>
+		<li><a data-toggle="tab" href="#menu1">Bianca Zogno</a></li>
+		<li><a data-toggle="tab" href="#menu2">Débora Serrico</a></li>
+		<li><a data-toggle="tab" href="#menu3">Ingrid Aguiar</a></li>
+	</ul>
+  
+	<!-- GRUPO SÓ POR DEUS - DESCRIÇÃO -->
+	<div class="tab-content">
+  
+		<div id="home" class="tab-pane fade in active">
+		<h2>Renato Reis</h2>
+		<p>
+		Com 18 anos de carreira, desde 1997,  sendo 14 deles na direção teatral, Renato formou-se pelo Senac em 2012, é ator profissional e contratado do Grupo Folclórico Lira dos autos. É fundador, diretor e dramaturgo dos grupos teatrais “Só por Deus” e “Mundos Paralelos. Desde 2008 trabalha com projetos para crianças e adolescentes carentes e está com um em uma praça pública do Rio Pequeno. O Grupo teatral “Só por Deus” foi selecionado para o Festival Nacional Carpiem Diem, sediado em Salto de Itu em março de 2015.
+
+		Com sua vasta experiência na área, atuou em gravações da TV Record em 2013 e 2014, em diversos programas. Dentre os cursos e oficinas teatrais, estão o de Teatro para todas as idades com Genivaldo de José (2014), Curso Teatral na Escola Antonio Salve Giglio (2001 a 2009), Curso Profissionalizante na Recriarte (2010 a 2011) e Curso Profissionalizante Senac (2010 a 2012). Atualmente fundou o Espaço Cultural Usina de Artistas (12/09/2015), onde executa o trabalho de direção artística e como professor de teatro para todas as idades, ativo com o grupo teatral Só por Deus, Mundos paralelos, Lira dos Autos e outros.
+	  
+		Para ele, o teatro é muito mais além que representar personagens:
+		“O teatro é minha paixão, minha religião e minha vida. Através dele vejo as cores mais lindas no mundo e me traz o conhecimento que preciso pra mudar o ambiente em que vivo e as pessoas que convivo. O teatro me da a ferramenta para envolver todos os envolvidos na minha aula, para que juntos, possamos nos melhorar e assim melhorar o mundo em que vivemos. A arte teatral me fez ser inteiro e intenso no que amo fazer e, assim me faz amar viver.”
+		“Ninguém muda o caminho da arte, mas a arte muda o caminho de todos.”
+		</p>
+		</div>
+	
+		<div id="menu1" class="tab-pane fade">
+		<h2>Bianca Zogno</h2>
+		<p>
+		Atriz e Bailarina. Em 2003 iniciei meu caminho artístico no Ballet através de um projeto governamental chamado Escola da Família, durante o tempo que participei desse projeto fiz apresentações com o grupo em Mostras Culturais, Escolas e Teatros. Porem, não cheguei a participar de nenhum festival.
+	  
+		Em 2009, iniciei minha carreira no teatro em uma Ong chamada Vozes da Capela, onde conheci o Ator e Diretor Renato Reis. Durante o período que participei nessa ong pude apresentar os seguintes espetáculos com o Grupo Teatral Mundos Paralelos: Entre o bem e o mal e Meu pequeno amigo imaginário que foi apresentado no Festival de Poesias Encenadas (Fenapo) ganhando os seguintes prêmios: Melhor Maquiagem, Melhor figurino e 3° Lugar em Melhor Espetáculo. Após dois anos nessa ong, o nosso grupo foi fazer teatro independente em uma praça publica (2011), nesse ano participamos novamente do Fenapo com o espetáculo O que acontece depois? Nesse ano ganhamos prêmios de Melhor Ator e 2° Lugar em melhor espetáculo. Após um ano com o Teatro na Praça, conseguimos espaço na Célia Ballet, em 2012. La permanecemos até agosto de 2015, apresentamos os espetáculos: A Poesia dos meus dias mortos, A dança dos contos e Meu pequeno amigo imaginário.
+	  
+		Em 2014 fui convidada a participar do Grupo Teatral Só por Deus, com o Diretor e Ator Renato Reis, participando inicialmente do espetáculo A filha do bandido no Festival de Poesias Encenadas(Fenapo) e Festival Teatral Carpediem-Salto de Itu(2015). Em,2015 participei do Festival de Curtas Teatrais(Fect) com a peça A catadora de pensamentos, do Renato Reis; e no mesmo ano participei do Festival de Poesias Encenadas(Fenapo) com a peça “Quando morre a poesia, nascem os animais”, que nos rendeu o prêmio de Melhor Figurino e Melhor maquiagem.
+	  
+		Hoje continuo minha carreira teatral com o Grupo Teatral Só Por Deus.
+		</p>
+		</div>
+	
+		<div id="menu2" class="tab-pane fade">
+		<h2>Débora Serrico</h2>
+		<p>
+		A garota que é um paradoxo ambulante, com os pensamentos voltados para galáxia, espaço e afins. Nossa publicitaria tem uma mente cuja a imaginação é fértil, formada também em técnico em multimídia, essa lunática (No sentido de amar lua, e no sentido de estar sempre no mundo da lua também), tem 8 anos de experiência em artes cênicas, e 5 anos voltados para multimídia e comunicação. Hoje fazendo parte do grupo teatral "Só por Deus", na qual participa a 5 anos.
+	  
+		Dentre os cursos e oficinas teatrais que fizeram sua trajetória estão o Curso Teatral na Escola Antonio Salve Giglio (2009 a 2012),  Introdução as linguagens teatrais e iniciação a arte dramática - ETA - Estúdio de Treinamento Artístico (2013).
+	  
+		"Teatro não é só teatro, não se brinca de teatro, se vive o teatro. A arte  não é só arte, como a música não é apenas uma música, tudo tem um significado pra mim, e tudo tem que se viver intensamente, e viver intensamente não é fazer qualquer coisa, não é ser razo, a vida não é rasa."
+	  
+		"O teatro é meu sonho, um sonho real, onde possibilita ser quem sou, e isso não irá mudar, irá me fazer mais forte, a cada dia, mais e mais. É o meu sonho de criança que permanecerá por todos os meus dias, é o que faz eu querer saber quem fui um dia, qual seria a genese da minha vida"
+		</p>
+		</div>
+		
+		<div id="menu3" class="tab-pane fade">
+		<h2>Ingrid Aguiar</h2>
+		<p>
+		Atriz, Dançarina, Bailarina, Professora, Diretora... Tantas nomenclaturas me cabem profissionalmente, que fica difícil escolher apenas uma para me definir. Mais difícil ainda é restringir, elegendo apenas uma das opções para eu executar, gosto de fazer muitas coisas! Em 2007,inciei minha carreira na dança; comecei a fazer aula de ballet e street dance em uma Ucip(Instituto Pró- Seguir),participando de vários festivais e eventos, como Segunda Amostra Actum,Clube Banespa( 2008),ganhando como melhor dançarina mirim; participei do Festival Petit Pass(20011 e 2015),com indicação para melhor dançarina juvenil; e do Evento Soliedariedance (2009-2015);ganhando durante 5 anos(2009-2014) o primeiro de melhor atriz e em 2011,ganhei como melhor coreografa. Em 2010 iniciei jazz e dança do ventre na Elevé dança e arte,e em 2014,inicie Ballet Método Cubano e contemporâneo.E,em 2016 iniciei o curso de Ballet intermediário no Teatro Municipal de São Paulo. Em 2007, iniciei minha carreira no teatro em um curso livre na agencia ProA’rt, onde fazíamos obras próprias; permanecendo até em 2010 neste curso, durante o curso participei de quadros televisivos, como “Sonhar mais um sonho”, ”De volta pra minha terra” e algumas figurações em novelas; todos na emissora SBT. Em 2010, iniciei outro curso livre no Espaço Fátima do Valle, em que fiz minha primeira peça de autor conhecido, “Decote” de Nelson Rodrigues, e cada seis meses fazíamos uma peça de autores conhecidos, apresentando no Teatro Santo Agostinho; no mesmo ano gravei “Lendas Urbanas” para Rede Record de Televisão. Em 2011, fiquei pela primeira peça em cartaz, no próprio Espaço Fátima do Valle, com a Peça “Perdoa-me por me traíres”, do Nelson Rodrigues, durante um mês; no mesmo ano atuei no meu primeiro musical, “O Despertar da primavera”, do Frank Wedekind.Em,2012 fiquei em cartaz com o musical “West Side Story”,por um mês, no Espaço Fatima do Valle; no mesmo ano, comecei a fazer Workshops musicais, pela Vitaza Produções, no Espaço Fatima do Valle e fiz tal workshop até 2014,fazendo varias esquetes e musicais inteiros, como o “Legalmente Loira”, “Footloose” etc. Em 2014,participei da peça “Me leva nos olhos”, da Lua Produções.No ano de 2013, entrei no Grupo Teatral Só por Deus; participando do Festival de Poesias Encenadas(Fenapo), com a peça “Aos olhos de Deus”, de autoria do responsável do grupo, Renato Reis, com indicação para melhor Atriz. Em 2014,com o Grupo Teatral Só por Deus, participei do Festival de Curtas Teatrais(Fect),com a peça “A filha do bandido”, do Renato Reis, com indicação para melhor atriz coadjuvante, nos rendendo os prêmios de segundo melhor espetáculo, melhor direção etc,.Com a mesma peça participei do Festival de Poesias Encenadas(Fenapo) e Festival Teatral Carpediem-Salto de Itu(2015).Em,2015 participei do Festival de Curtas Teatrais(Fect) com a peça “A catadora de pensamentos”, do Renato Reis; e no mesmo ano participei do Festival de Poesias Encenadas(Fenapo) com a peça “Quando morre a poesia, nascem os animais”, que nos rendeu o prêmio de Melhor Figurino e Melhor maquiagem.E,atualmente estou cursando o segundo ano de licenciatura em artes cênicas na Universidade de São Paulo(USP),na Escola de Comunicação e artes(ECA). No ano de 2015, dividi minha vida profissional em duas: Professora de Teatro,Jazz e Ballet.Assumindo aulas de ballet babys em uma escolinha, com crianças na faixa etária de 3 a 7 anos. Aulas de Teatro na academia Elevé Dança e Arte, para crianças na faixa etária de 6 a 10 anos; e no Espaço Cultural Usina de artistas aulas também de teatro para crianças da mesma faixa etária, aulas de ballet para crianças- 3 a 7 anos-, e para adultos, e jazz para crianças de 6 a 12 anos.
+		</p>
+		</div>
+	
+	</div>
+	<!-- GRUPO SÓ POR DEUS - DESCRIÇÃO -->
+  
+</div>
+
+
+
+<!-- Footer -->
+<footer class="container-fluid text-center">
+  <table class="table table-striped">
+  <thead>
+  <tr> 
+  <th>&copy; ESPAÇO CULTURAL USINA DE ARTISTAS</th>
+  <th>Theme: <a href="http://www.w3schools.com" data-toggle="tooltip" title="w3schools" target="_blank">w3schools</a></th>
+  <th>Icons: <a href="http://www.flaticon.com/authors/freepik" data-toggle="tooltip" title="Flaticon" target="_blank">Flaticon</a></th>
+  <th>Design: <a href="https://pt-br.facebook.com/nayara.takebayashi" data-toggle="tooltip" title="Facebook" target="_blank">Nayara Takebayashi</a></th>
+  </tr>
+  </table>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip();
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
+</html>
+

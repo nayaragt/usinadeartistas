@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Espaço Cultural Usina de Artistas</title>
+  <!-- <meta charset="utf-8"> -->
+  <meta charset="iso-8859-1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 400 15px/1.8 Lato, sans-serif;
+      color: #777;
+  }
+  h3, h4 {
+      margin: 10px 0 30px 0;
+      letter-spacing: 10px;
+      font-size: 20px;
+      color: #111;
+  }
+  .container {
+      padding: 80px 120px;
+  }
+  .person {
+      border: 10px solid transparent;
+      margin-bottom: 25px;
+      width: 80%;
+      height: 80%;
+      opacity: 0.7;
+  }
+  .person:hover {
+      border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+      -webkit-filter: grayscale(90%);
+      filter: grayscale(90%); /* make all photos black and white */
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+  }
+  .carousel-caption h3 {
+      color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+      background: #2d2d30;
+      color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail p {
+      margin-top: 15px;
+      color: #555;
+  }
+  .btn {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #f1f1f1;
+      border-radius: 0;
+      transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+      border: 1px solid #333;
+      background-color: #fff;
+      color: #000;
+  }
+  .modal-header, h4, .close {
+      background-color: #333;
+      color: #fff !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-header, .modal-body {
+      padding: 40px 50px;
+  }
+  .nav-tabs li a {
+      color: #777;
+  }
+  #googleMap {
+      width: 100%;
+      height: 400px;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+  }
+  .navbar {
+      font-family: Montserrat, sans-serif;
+      margin-bottom: 0;
+      background-color: #2d2d30;
+      border: 0;
+      font-size: 11px !important;
+      letter-spacing: 4px;
+      opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+      color: #fff !important;
+  }
+  .navbar-nav li.active a {
+      color: #fff !important;
+      background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+  }
+  .open .dropdown-toggle {
+      color: #fff;
+      background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+      color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+      background-color: red !important;
+  }
+  footer {
+      background-color: #2d2d30;
+      color: #f5f5f5;
+      padding: 32px;
+	  /* display: block; */
+  }
+  footer a {
+      color: #f5f5f5;
+  }
+  footer a:hover {
+      color: #777;
+      text-decoration: none;
+  }
+  .form-control {
+      border-radius: 0;
+  }
+  textarea {
+      resize: none;
+  }
+  thead {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+  }
+  .panel-custom {
+	color:#8a6d3b;
+	background-color:#ffba66;
+	border-color:#faebcc;
+	letter-spacing: 4px;
+	font-size: 11px !important;
+	padding: 10px 10px 10px 10px; 
+	/* padding: 1em 1em; */
+	/* padding: 1em 1em 1em 1em !important; */
+}
+  </style>
+  
+<!-- Begin Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-78807937-1', 'auto');
+  ga('set', 'page', '/aulas');
+  ga('send', 'pageview', page);
+  ga('set', 'userId', {{USER_ID}}); // Defina o ID de usuário usando o user_id conectado.
+  // ga('send', 'pageview', [page], [fieldsObject]);
+  // ga('set', 'title', 'inicio');
+  // ga('send', 'pageview', page);
+});
+</script>
+<!-- End Google Analytics -->
+
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#myPage">Logo</a>
+    </div>
+	
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+		<li><a href="inicio.html">INÍCIO</a></li>
+		<li><a href="sopordeus.html">SÓ POR DEUS</a></li>
+		<li><a href="quemsomos.html">QUEM SOMOS</a></li>
+		<li><a href="contato.html">CONTATO</a></li>
+		<li><a href="aulas.html">HORÁRIOS DAS AULAS</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Merchandise</a></li>
+            <li><a href="#">Extras</a></li>
+            <li><a href="#">Media</a></li>
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+  
+<div class="container">
+  <h2>HORÁRIOS DAS AULAS</h2>
+  <br>
+  <!-- <p>The .table-striped class adds zebra-stripes to a table:</p> -->
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+	    <th></th>
+        <th>CURSO</th>
+        <th>PROFESSOR</th>
+        <th>SEGUNDA-FEIRA</th>
+		<th>TERÇA-FEIRA</th>
+		<th>QUARTA-FEIRA</th>
+		<th>QUINTA-FEIRA</th>
+		<th>SEXTA-FEIRA</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><img src="images/theatre-64.png?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></td>
+		<td>TEATRO</td>
+        <td>RENATO REIS</td>
+        <td>19h às 21h</td>
+		<td></td>
+		<td>19h às 20h</td>
+		<td></td>
+		<td></td>
+      </tr>
+      <tr>
+		<td><img src="images/rap-64.png?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></td>
+        <td>HIP HOP</td>
+        <td>GIANCARLO MASTRONARDI</td>
+        <td>19h às 20h</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+      </tr>
+      <tr>
+		<td><img src="images/fighters-couple-64.png?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></td>
+        <td>CAPOEIRA</td>
+        <td>MARCELO TOUCA</td>
+        <td>20h às 21h</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+      </tr>
+	  <tr>
+		<td><img src="images/piano-64.png?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></td>
+        <td>TECLADO</td>
+        <td>MAESTRO HANILTON MESSIAS</td>
+		<td></td>
+        <td>18h às 19h</td>
+		<td></td>
+		<td></td>
+		<td></td>
+      </tr>
+      <tr>
+		<td><img src="images/flute-64.png?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></td>
+        <td>FLAUTA</td>
+        <td>MAESTRO HANILTON MESSIAS</td>
+		<td></td>
+        <td>19h às 20h</td>
+		<td></td>
+		<td></td>
+		<td></td>
+      </tr>
+      <tr>
+		<td><img src="images/ballerina-shoes-64.png?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></td>
+        <td>BALLET</td>
+        <td>INGRID AGUIAR</td>
+		<td></td>
+        <td>19h às 21h</td>
+		<td></td>
+		<td></td>
+		<td></td>
+      </tr>
+      <tr>
+		<td><img src="images/arts-64.png?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></td>
+        <td>ARTESANATO</td>
+        <td>GUACIRA / ANTÔNIO CARLOS</td>
+		<td></td>
+        <td>19h às 21h</td>
+		<td></td>
+		<td></td>
+		<td></td>
+      </tr>
+      <tr>
+		<td><img src="images/guitar-64.png?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></td>
+        <td>VIOLÃO</td>
+        <td>JURA D'ANIN</td>
+		<td></td>
+		<td></td>
+        <td>19h às 21h</td>
+		<td></td>
+		<td></td>
+      </tr>
+      <tr>
+		<td><img src="images/percussion-64.png?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></td>
+        <td>PERCUSSÃO</td>
+        <td>JURA D'ANIN</td>
+		<td></td>
+		<td></td>
+        <td>21h às 22h</td>
+		<td></td>
+		<td></td>
+      </tr>
+      <tr>
+		<td><img src="images/microphone-64.png?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></td>
+        <td>CANTO</td>
+        <td>ANDRÉ HERYSON</td>
+		<td></td>
+		<td></td>
+        <td>Horários Flexíveis</td>
+		<td></td>
+		<td></td>
+      </tr>
+      <tr>
+		<td><img src="images/circus-tent-64.png?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></td>
+        <td>CIRCO</td>
+        <td>FABI MINAS</td>
+		<td></td>
+		<td></td>
+		<td></td>
+        <td>19h às 20h</td>
+		<td></td>
+      </tr>
+      <tr>
+		<td><img src="images/jazz-64.png?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></td>
+        <td>JAZZ</td>
+        <td>INGRID AGUIAR</td>
+		<td></td>
+		<td></td>
+		<td></td>
+        <td>21h às 22h</td>
+		<td></td>
+      </tr>
+      <tr>
+		<td><img src="images/puppet-64.png?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></td>
+        <td>TEATRO INFANTIL</td>
+        <td>INGRID AGUIAR</td>
+		<td></td>
+		<td></td>
+		<td></td>
+        <td>20h às 21h</td>
+		<td></td>
+      </tr>
+      <tr>
+		<td><img src="images/ballroon-64.png?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></td>
+        <td>DANÇA DE SALÃO</td>
+        <td>SAGAT KOF</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+        <td>19h às 20h</td>
+      </tr>
+      <tr>
+		<td><img src="images/camera-64.png?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></td>
+        <td>CINEMA</td>
+        <td>HESLEY NASCIMENTO</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+        <td>19h às 20h</td>
+      </tr>
+      <tr>
+		<td><img src="images/ballerina-64.png?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></td>
+        <td>DANÇA DO VENTRE</td>
+        <td>DRYKA UVINHA</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+        <td>20h às 21h</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+<!--
+<div id="band" class="container text-center">
+  <h3>Espaço Cultural Usina de Artistas</h3>
+  <p>"Que possamos ser inteiros e intensos, naquiulo que somos melhores, que é ser nós mesmos."</p>
+  <p><em>Renato Reis</em></p>
+  <br>
+</div>
+-->
+  
+  
+
+
+
+
+
+<!-- Footer -->
+<footer class="container-fluid text-center">
+  <table class="table table-striped">
+  <thead>
+  <tr> 
+  <th>&copy; ESPAÇO CULTURAL USINA DE ARTISTAS</th>
+  <th>Theme: <a href="http://www.w3schools.com" data-toggle="tooltip" title="w3schools" target="_blank">w3schools</a></th>
+  <th>Icons: <a href="http://www.flaticon.com/authors/freepik" data-toggle="tooltip" title="Flaticon" target="_blank">Flaticon</a></th>
+  <th>Design: <a href="https://pt-br.facebook.com/nayara.takebayashi" data-toggle="tooltip" title="Facebook" target="_blank">Nayara Takebayashi</a></th>
+  </tr>
+  </table>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip();
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
+</html>
+
