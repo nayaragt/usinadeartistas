@@ -211,7 +211,7 @@ html, body{
     border: 3px solid #2f2f2f;
     text-transform: uppercase;
     /*background: #f44336; */
-    background: rgba(121, 210, 121, 0.6);
+	background: rgba(255, 194, 102, 0.6); /* laranja #ffc266 */
 	letter-spacing: 1px;
     font-weight: 700;
     text-decoration: none;
