@@ -1660,7 +1660,8 @@ ul.w3agile_footer_grid_list i.fa.fa-twitter {
 		right: 45px;
 	}
 	.banner {
-		background: url(../images/header2.jpg) no-repeat -84px 0px;
+		/* background: url(../images/header2.jpg) no-repeat -84px 0px; */
+		background: url(../images/header2.jpg) no-repeat 0px 0px;
 		background-size: cover;
 	}
 	.icon-right {
